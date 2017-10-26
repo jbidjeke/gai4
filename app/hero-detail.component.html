@@ -1,0 +1,40 @@
+
+<div class="container-fluid text-center">    
+  <div class="row content">
+    <div class="col-sm-2 sidenav">
+        
+        <!-- heroes.componemt -->
+        <my-heroes></my-heroes> 
+
+    </div>
+    <div class="col-sm-8 text-left"> 
+        
+        <div *ngIf="hero">
+          <h2>{{hero.name}} details!</h2>
+          <div>
+            <label>id: </label>{{hero.id}}</div>
+          <div>
+            <label>name: </label>
+            <input [(ngModel)]="hero.name" placeholder="name" />
+           </div>
+          <button (click)="goBack()">Back</button>
+          <button (click)="save()">Save</button>
+        </div> 
+        
+        <my-dashboard></my-dashboard>
+        
+    </div>
+    <div class="col-sm-2 sidenav">
+      <div class="well">
+        <p>ADS</p>
+      </div>
+      <div class="well">
+        <p>ADS</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="container-fluid text-center">
+  <p>Footer Text</p>
+</footer>

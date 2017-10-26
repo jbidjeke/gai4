@@ -1,0 +1,44 @@
+  
+
+<div>
+    <input #heroName placeholder="Nom" />
+    <button (click)="add(heroName.value); heroName.value=''">
+    Ajouter
+    </button>
+</div>
+<!--
+<ul class="heroes">
+    <li *ngFor="let hero of heroes" (click)="onSelect(hero)"
+    [class.selected]="hero === selectedHero">
+        <span class="badge">{{hero.id}}</span>
+        <span>{{hero.name}}kgggg gsgqze jkffzgfo fselkgkhgshh</span>
+        (<span class="delete" (click)="delete(hero); $event.stopPropagation()">x</span>)
+    </li>
+</ul>-->
+<div *ngIf="selectedHero">
+    <h2>
+    {{selectedHero.name | uppercase}} is my hero
+    </h2>
+    <button (click)="gotoDetail()">Modifier</button>
+</div>
+
+
+
+<div class="table-responsive">          
+      <table class="table heroes">
+        <tbody>
+          <tr  *ngFor="let hero of heroes" (click)="onSelect(hero)"
+    [class.selected]="hero === selectedHero">
+            <td>{{hero.name}}</td>
+            <td class="delete" (click)="delete(hero); $event.stopPropagation()">X</td>
+          </tr>
+        </tbody>
+      </table>
+ </div>
+
+
+
+
+
+        
+
